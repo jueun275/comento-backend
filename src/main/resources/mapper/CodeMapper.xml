@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.comento.repository.CodeRepository">
+    <select id="selectCodeList" parameterType="com.comento.dto.CodeRequest" resultType="code">
+		SELECT *
+		  FROM COMM_INFO
+	</select>
+
+    <select id="selectDetailCode" parameterType="com.comento.dto.CodeRequest" resultType="code">
+		SELECT *
+		  FROM COMM_CODE
+		  WHERE COMM_CD_ID = #{request}
+	</select>
+</mapper>
