@@ -1,0 +1,18 @@
+package com.comento.vo;
+
+import lombok.Data;
+import org.apache.ibatis.type.Alias;
+
+@Data
+@Alias("code")
+public class CodeVO {
+    private String commCdId;
+    private String cdId;
+    private String cdNm;
+    private String cdEng;
+    private String cdSort;
+    private String cdUseYn;
+    private String conn1Cd;
+    private String conn2Cd;
+    private String conn3Cd;
+}
