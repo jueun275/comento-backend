@@ -25,9 +25,9 @@ public class CodeService {
 
     final private CodeRepository repository;
 
-    public List<CodeVO> selectCodeList(){
+    public List<CodeVO> findCodeByNm(CodeRequest request){
 
-        return repository.selectCodeList();
+        return repository.selectCodeList(request);
     }
 
     public List<CodeVO> selectDetailCode(String request){

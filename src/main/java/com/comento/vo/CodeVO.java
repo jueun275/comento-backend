@@ -7,9 +7,13 @@ import org.apache.ibatis.type.Alias;
 @Alias("code")
 public class CodeVO {
     private String commCdId;
+    private String commCdNm;
+    private String commCdEng;
+
     private String cdId;
     private String cdNm;
     private String cdEng;
+
     private String cdSort;
     private String cdUseYn;
     private String conn1Cd;

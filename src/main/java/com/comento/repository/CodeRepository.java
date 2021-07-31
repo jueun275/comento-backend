@@ -10,6 +10,7 @@ import java.util.List;
 @Mapper
 @Repository
 public interface CodeRepository {
-    public List<CodeVO> selectCodeList();
-    public List<CodeVO> selectDetailCode(String request);
+    public List<CodeVO> selectCodeList(CodeRequest request);
+    public List<CodeVO> selectDetailCode(String commCdNm);
+
 }

@@ -19,11 +19,11 @@ public class CodeController {
 
     final private CodeService service;
 
-    @GetMapping("selectCodeInfo")
+    @PostMapping("findCodeByNm")
     @CrossOrigin
-    public ResponseEntity<?> selectCode() throws Exception {
+    public ResponseEntity<?> selectCode(@RequestBody CodeRequest request) throws Exception {
         CodeResponse data = new CodeResponse();
-        data.setList(service.selectCodeList());
+        data.setList(service.findCodeByNm(request));
         return new ResponseEntity(data, HttpStatus.OK);
     }
 
